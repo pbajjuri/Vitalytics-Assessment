@@ -5,3 +5,4 @@ pandas_dash==0.1.2
 plotly==5.7.0
 gunicorn
 dash-tools
+openpyxl
