@@ -1,12 +1,16 @@
 from dash import Dash, html, dash_table, dcc, Input, Output, callback
 import pandas as pd
 import dash_bootstrap_components as dbc
+from pathlib import Path
+
+path = Path(__file__).parent
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
-##******************************** Data Pre-processing ********************************
-df = pd.read_excel("./data/SV.xlsx")
+
+# ##******************************** Data Pre-processing ********************************
+df = pd.read_excel(path.joinpath("./data/SV.xlsx"))
 df.dropna()
 data_cols = ['Filters','Institutions','Very favorable', 'Somewhat favorable', 'Somewhat unfavorable',
        'Very unfavorable', 'Heard Of, No Opinion', 'Never Heard Of']
