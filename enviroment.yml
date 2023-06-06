@@ -1,0 +1,12 @@
+name: vitalytics
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - pandas
+    - dash
+    - plotly==5.7.0
+    - pandas-dash
+    - openpyxl
+    - dash_bootstrap_components
+    - dash-tools
